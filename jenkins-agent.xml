@@ -1,0 +1,9 @@
+<service>
+    <id>jenkins80agent</>
+    <name>Jenkins Agent for Jenkins</name>
+    <description>This service runs the agent process connected to jenkins:80</description>
+    <executable>C:\Program Files\OpenJDK\jdk-11-0-2\bin\java.exe</executable>
+    <arguments>-jar C:\jenkins\agent.jar -jnlpUrl http://jenkins.erule.net/manage/computer/windows%2Dagent/jenkins-agent.jnlp -secret b9c210de639c13365592c2aa4176aacbbbfeb666d1366fd30a7b46da482c96f4 -workdir "c:\jenkins"</arguments>
+    <log mode="roll" />
+    <onfailure action="restart" />
+</service>
